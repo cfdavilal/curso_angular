@@ -1,1 +1,11 @@
-<p>persona</p>
+<p>
+    Nombre: {{getNombre()}}
+    Apellido: {{getApellido()}}
+    Edad: {{getEdad() + 1 }}
+</p>
+<div (keyup)='0'>
+    <label for="">Repetidor: </label>
+    <input #entrada/>
+    <label #repeticion> Repeticion: </label>
+    {{entrada.value}}
+</div>
