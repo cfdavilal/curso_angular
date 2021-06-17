@@ -2,7 +2,15 @@
   <div class="row">
     <div class="col">
       <h1>Listado de Personas</h1>
+      <!-- property binding -->
+      <button [class]='clase_boton' [disabled]='desabilitar' (click)='agregarPersona()'>Agregar Persona</button>
+      <p>{{mensaje}}</p>
       <app-persona></app-persona>
+      <hr>
+      <label for="">Titulo Persona</label>
+      <!-- <input type="text" class="form-control" (input)='modificarTitulo($event)'> -->
+      <input type="text" class="form-control" [(ngModel)]='titulo'>
+      {{titulo}}
     </div>
   </div>
 </div>
