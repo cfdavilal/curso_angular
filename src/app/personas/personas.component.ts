@@ -12,4 +12,17 @@ import { Component } from '@angular/core';
     `,
   ], */
 })
-export class PersonasComponent {}
+export class PersonasComponent {
+  desabilitar: boolean = false
+  clase_boton: string = 'btn btn-success'
+  mensaje: string = 'No se ah agregado ninguna persona'
+  titulo: string = 'Ingeniero'
+  agregarPersona(){
+    this.mensaje = 'Persona agregada'
+  }
+
+  //event binding
+/*   modificarTitulo(event: Event){
+    this.titulo = (<HTMLInputElement>event.target).value
+  } */
+}
