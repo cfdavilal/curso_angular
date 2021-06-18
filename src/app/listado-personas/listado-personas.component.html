@@ -1,14 +1,38 @@
-<div class="container">
-  <div class="col">
-    <h3>{{ titulo }}</h3>
+<div class="container-fluid bg-all">
+  <div class="container">
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4 bg-primary mt-3 text-center p-2 text-light">
+        <h3>{{ titulo }}</h3>
+      </div>
+      <div class="col-4"></div>
+    </div>
   </div>
-  <hr />
-  <!-- Formulario -->
-  <app-formulario (personaCreada)="personaAgregada($event)"></app-formulario>
-  <hr />
-  <app-listado-persona
-    *ngFor="let personaElemento of personas; let i = index"
-    [persona]="personaElemento"
-    [indice]="i"
-  ></app-listado-persona>
+  <div class="container">
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4">
+        <hr />
+        <!-- Formulario -->
+        <app-formulario
+          (personaCreada)="personaAgregada($event)"
+        ></app-formulario>
+        <hr />
+      </div>
+      <div class="col-4"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4 bg-light">
+        <app-listado-persona
+          *ngFor="let personaElemento of personas; let i = index"
+          [persona]="personaElemento"
+          [indice]="i"
+        ></app-listado-persona>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
 </div>
