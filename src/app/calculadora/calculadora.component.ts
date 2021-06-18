@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-calculadora',
@@ -8,8 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class CalculadoraComponent implements OnInit {
   private titulo_calculadora: string = 'Aplicacion de Calculadora';
 
-  public operandoA: number = 0;
-  public operandob: number = 0;
   public resultado: number = 0;
 
   public getTitulo_calculadora(): string {
@@ -20,22 +18,6 @@ export class CalculadoraComponent implements OnInit {
     this.titulo_calculadora = titulo_calculadora;
   }
 
-  public getOperandoA(): number {
-    return this.operandoA;
-  }
-
-  public setOperandoA(operandoA: number): void {
-    this.operandoA = operandoA;
-  }
-
-  public getOperandob(): number {
-    return this.operandob;
-  }
-
-  public setOperandob(operandob: number): void {
-    this.operandob = operandob;
-  }
-
   public getResultado(): number {
     return this.resultado;
   }
@@ -44,15 +26,16 @@ export class CalculadoraComponent implements OnInit {
     this.resultado = resultado;
   }
 
-  sumar() {
-    this.resultado = this.operandoA + this.operandob;
-  }
 /*   modificarOperandoA(event: Event) {
     this.operandoA = parseInt((<HTMLInputElement>event.target).value);
   }
   modificarOperandoB(event: Event) {
     this.operandob = parseInt((<HTMLInputElement>event.target).value);
   } */
+
+  nuevoResultado(nuevoRes: number){
+    this.resultado = nuevoRes
+  }
 
   constructor() {}
 
