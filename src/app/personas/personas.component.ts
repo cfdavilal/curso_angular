@@ -15,10 +15,12 @@ import { Component } from '@angular/core';
 export class PersonasComponent {
   desabilitar: boolean = false
   clase_boton: string = 'btn btn-success'
-  mensaje: string = 'No se ah agregado ninguna persona'
+  mensaje: string = ''
   titulo: string = 'Ingeniero'
+  mostrar: boolean = false
   agregarPersona(){
     this.mensaje = 'Persona agregada'
+    this.mostrar = !this.mostrar 
   }
 
   //event binding
