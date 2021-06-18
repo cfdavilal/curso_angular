@@ -12,7 +12,7 @@ import { ListadoPersonaComponent } from './listado-persona/listado-persona.compo
 import { FormularioComponent } from './formulario/formulario.component';
 import { FormCalculadoraComponent } from './form-calculadora/form-calculadora.component';
 import { ResultadoCalculadoraComponent } from './resultado-calculadora/resultado-calculadora.component';
-import { LoggingService } from './loggingService.service';
+import { LoggingService } from './LoggingService.service';
 import { PersonasService } from './personas.service';
 
 @NgModule({

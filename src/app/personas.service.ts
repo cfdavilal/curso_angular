@@ -1,6 +1,7 @@
 import { EventEmitter, Injectable } from '@angular/core';
 import { Persona } from './listado-personas/Persona.model';
-import { LoggingService } from './loggingService.service';
+//import { LoggingService } from './loggingService.service';
+import { LoggingService } from './LoggingService.service';
 
 @Injectable()
 export class PersonasService {
