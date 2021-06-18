@@ -1,0 +1,30 @@
+<form class="row g-3">
+    <!-- Añade elementos al formulario de manera horizontal!! -->
+    <div class="mb-3 col-md-2">
+      <label for="nombre" class="visually-hidden-focusable">Nombre</label>
+      <input
+        type="text"
+        name="nombre"
+        id="nombre"
+        placeholder="Nombre"
+        class="form-control"
+        [(ngModel)]="nombre_input"
+      />
+    </div>
+    <div class="mb-3 col-md-2">
+      <label for="apellido" class="visually-hidden-focusable">Apellido</label>
+      <input
+        type="text"
+        name="apellido"
+        id="apellido"
+        placeholder="apellido"
+        class="form-control"
+        [(ngModel)]="apellido_input"
+      />
+    </div>
+    <div class="col">
+      <button type="submit" class="btn btn-primary" (click)="agregarPersona()">
+        Nueva Persona
+      </button>
+    </div>
+  </form>

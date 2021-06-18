@@ -13,14 +13,11 @@ export class ListadoPersonasComponent implements OnInit {
     new Persona('Laura', 'Juarez'),
     new Persona('Carla', 'Lara'),
   ];
-  nombre_input: string = '';
-  apellido_input: string = '';
+  personaAgregada(persona: Persona) {
+    this.personas.push(persona)
+  }
 
   constructor() {}
 
   ngOnInit(): void {}
-
-  agregarPersona(){
-    this.personas.push(new Persona(this.nombre_input, this.apellido_input))
-  }
 }
