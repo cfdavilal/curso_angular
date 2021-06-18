@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PersonasService } from '../personas.service';
 import { Persona } from './Persona.model';
 
 @Component({
@@ -8,16 +9,15 @@ import { Persona } from './Persona.model';
 })
 export class ListadoPersonasComponent implements OnInit {
   public titulo: string = 'Listado de Personas';
-  public personas: Persona[] = [
-    new Persona('Juan', 'Perez'),
-    new Persona('Laura', 'Juarez'),
-    new Persona('Carla', 'Lara'),
-  ];
+  public personas: Persona[] = []
+  
   personaAgregada(persona: Persona) {
-    this.personas.push(persona)
+    this.personasService.agregarPersona(persona)
   }
 
-  constructor() {}
+  constructor(private personasService: PersonasService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.personas = this.personasService.personas
+  }
 }
