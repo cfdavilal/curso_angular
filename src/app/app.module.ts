@@ -10,6 +10,8 @@ import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { ListadoPersonasComponent } from './listado-personas/listado-personas.component';
 import { ListadoPersonaComponent } from './listado-persona/listado-persona.component';
 import { FormularioComponent } from './formulario/formulario.component';
+import { FormCalculadoraComponent } from './form-calculadora/form-calculadora.component';
+import { ResultadoCalculadoraComponent } from './resultado-calculadora/resultado-calculadora.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { FormularioComponent } from './formulario/formulario.component';
     CalculadoraComponent,
     ListadoPersonasComponent,
     ListadoPersonaComponent,
-    FormularioComponent
+    FormularioComponent,
+    FormCalculadoraComponent,
+    ResultadoCalculadoraComponent
   ],
   imports: [
     BrowserModule,
