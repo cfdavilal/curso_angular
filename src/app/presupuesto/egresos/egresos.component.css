@@ -1,0 +1,13 @@
+.egresosLabel{
+    color: rgb(194, 82, 48);
+}
+.egresos-bg{
+    background-color: white;
+    border-radius: 5px;
+}
+.egreso_salario_monto{
+    background-color: rgb(196, 196, 196);
+}
+.porcentaje{
+    background-color:rgb(235, 170, 170)
+}

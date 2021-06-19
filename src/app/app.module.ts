@@ -14,6 +14,11 @@ import { FormCalculadoraComponent } from './form-calculadora/form-calculadora.co
 import { ResultadoCalculadoraComponent } from './resultado-calculadora/resultado-calculadora.component';
 import { LoggingService } from './LoggingService.service';
 import { PersonasService } from './personas.service';
+import { HeaderComponent } from './presupuesto/header/header.component';
+import { FormPresupuestoComponent } from './presupuesto/form-presupuesto/form-presupuesto.component';
+import { IngresosComponent } from './presupuesto/ingresos/ingresos.component';
+import { EgresosComponent } from './presupuesto/egresos/egresos.component';
+import { PresupuestoComponent } from './presupuesto/presupuesto/presupuesto.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +30,12 @@ import { PersonasService } from './personas.service';
     ListadoPersonaComponent,
     FormularioComponent,
     FormCalculadoraComponent,
-    ResultadoCalculadoraComponent
+    ResultadoCalculadoraComponent,
+    HeaderComponent,
+    FormPresupuestoComponent,
+    IngresosComponent,
+    EgresosComponent,
+    PresupuestoComponent
   ],
   imports: [
     BrowserModule,

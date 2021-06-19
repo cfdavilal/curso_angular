@@ -1,0 +1,10 @@
+.ingresoLabel{
+    color: rgb(33, 214, 214);
+}
+.ingresos-bg{
+    background-color: white;
+    border-radius: 5px;
+}
+.ingreso_salario_monto{
+    background-color: rgb(196, 196, 196);
+}

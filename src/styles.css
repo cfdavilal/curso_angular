@@ -3,7 +3,6 @@
 }
 .bg-all {
     background-color: #2196F3;
-    min-height: 1000px;
     font-family: 'helvetica neue';
     background: url(./assets/bg-pattern.png), #2196F3;
     background: url(./assets/bg-pattern.png), -webkit-gradient(linear, right top, left top, from(#2196F3), to(#009688));
@@ -11,4 +10,11 @@
   }
   .boton{
       border-radius: 30%;
+  }
+  .bg-presupuesto {
+    background-color: #b61724;
+    font-family: 'helvetica neue';
+    background: url(./assets/bg-pattern.png), #ac1025;
+    background: url(./assets/bg-pattern.png), -webkit-gradient(linear, right top, left top, from(#2196F3), to(#009688));
+    background: url(./assets/bg-pattern.png), linear-gradient(to left, #531061, #b41d25)
   }
