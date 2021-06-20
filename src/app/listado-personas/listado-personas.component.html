@@ -11,9 +11,11 @@
   <div class="container">
     <div class="row">
       <div class="col-4"></div>
-      <div class="col-4">
+      <div class="col-4" style="text-align: center;">
         <hr />
         <!-- Formulario -->
+        <button class="btn btn-primary" style="cursor: pointer;" (click)="agregar()">+</button>
+        <hr>
         <app-formulario
           (personaCreada)="personaAgregada($event)"
         ></app-formulario>
