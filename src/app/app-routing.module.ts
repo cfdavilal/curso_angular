@@ -7,6 +7,8 @@ import { FormularioComponent } from './listado-personas/formulario/formulario.co
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { PresupuestoComponent } from './presupuesto/presupuesto/presupuesto.component';
 import { PersonasComponent } from './personas/personas.component';
+import { PersonaComponent } from './personas/persona/persona.component';
+import { ErrorComponent } from './error/error.component';
 
 const routes: Routes = [
   {path: '', component: ListadoPersonasComponent},
@@ -16,7 +18,8 @@ const routes: Routes = [
   ]},
   {path: 'calculadora', component: CalculadoraComponent},
   {path: 'presupuesto', component: PresupuestoComponent},
-  {path: 'personas', component: PersonasComponent}
+  {path: 'personas', component: PersonasComponent},
+  {path: '**', component: ErrorComponent}
 ]
 
 @NgModule({

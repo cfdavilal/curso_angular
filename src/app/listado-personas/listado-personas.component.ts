@@ -10,19 +10,26 @@ import { Persona } from './Persona.model';
 })
 export class ListadoPersonasComponent implements OnInit {
   public titulo: string = 'Listado de Personas';
-  public personas: Persona[] = []
-  
+  public personas: Persona[] = [];
+
   personaAgregada(persona: Persona) {
-    this.personasService.agregarPersona(persona)
+    this.personasService.agregarPersona(persona);
   }
 
-  constructor(private personasService: PersonasService,private router:Router) {}
+  constructor(
+    private personasService: PersonasService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    this.personas = this.personasService.personas
+    this.personasService
+      .obtenerPersonas().subscribe((personas: Persona[])=>{
+        this.personas = personas
+        this.personasService.setPersonas(personas)
+      })
   }
 
-  agregar(){
-    this.router.navigate(['listapersonas/agregar'])
+  agregar() {
+    this.router.navigate(['listapersonas/agregar']);
   }
 }

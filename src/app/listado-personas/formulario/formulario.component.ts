@@ -58,13 +58,6 @@ export class FormularioComponent implements OnInit {
     if (this.modoEdicion != null && this.modoEdicion == 1) {
       this.personasService.modificarPersona(this.index, nueva_persona);
     } else {
-      /*     this.LoggingService.enviaMensajeAConsola(
-        'Enviamos a la persona: ' +
-          nueva_persona.nombre +
-          ' ' +
-          nueva_persona.apellido
-      ); */
-      /*     this.personaCreada.emit(nueva_persona); */
       this.personasService.agregarPersona(nueva_persona);
     }
     this.router.navigate(['listapersonas']);
@@ -72,7 +65,7 @@ export class FormularioComponent implements OnInit {
 
   eliminarPersona(index: number) {
     if (this.modoEdicion != null && this.modoEdicion == 1) {
-      this.personasService.personas.splice(index, 1);
+      this.personasService.eliminarPersona(index)
       this.router.navigate(['listapersonas']);
     }
   }
