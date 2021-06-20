@@ -1,7 +1,7 @@
 import { ThrowStmt } from '@angular/compiler';
 import { Component, Input, OnInit } from '@angular/core';
-import { Persona } from '../listado-personas/Persona.model';
-import { PersonasService } from '../personas.service';
+import { Persona } from '../Persona.model';
+import { PersonasService } from '../../personas.service';
 
 @Component({
   selector: 'app-listado-persona',

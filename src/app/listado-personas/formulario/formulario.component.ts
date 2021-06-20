@@ -6,9 +6,9 @@ import {
   Output,
   ViewChild,
 } from '@angular/core';
-import { Persona } from '../listado-personas/Persona.model';
-import { LoggingService } from '../LoggingService.service';
-import { PersonasService } from '../personas.service';
+import { Persona } from '../Persona.model';
+import { LoggingService } from '../../LoggingService.service';
+import { PersonasService } from '../../personas.service';
 
 @Component({
   selector: 'app-formulario',
