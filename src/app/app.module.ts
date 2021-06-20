@@ -19,6 +19,9 @@ import { FormPresupuestoComponent } from './presupuesto/form-presupuesto/form-pr
 import { IngresosComponent } from './presupuesto/ingresos/ingresos.component';
 import { EgresosComponent } from './presupuesto/egresos/egresos.component';
 import { PresupuestoComponent } from './presupuesto/presupuesto/presupuesto.component';
+import { ErrorComponent } from './error/error.component';
+import { DataServices } from './data.services';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,14 +38,16 @@ import { PresupuestoComponent } from './presupuesto/presupuesto/presupuesto.comp
     FormPresupuestoComponent,
     IngresosComponent,
     EgresosComponent,
-    PresupuestoComponent
+    PresupuestoComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule //Necesario para el Two Way binding
+    FormsModule, //Necesario para el Two Way binding
+    HttpClientModule
   ],
-  providers: [LoggingService, PersonasService],
+  providers: [LoggingService, PersonasService, DataServices],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

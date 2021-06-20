@@ -1,20 +1,30 @@
 <div class="container border border-light">
   <!-- Recorrido del listado de personas -->
   <div class="row">
-    <div class="col-4">
+    <div
+      class="col-8"
+      style="background-color: rgb(82, 212, 169); border: 1px solid white"
+    >
       <ul>
         <li>
-          <a [routerLink]="['/listapersonas', indice]" [queryParams]="{modoEdicion:1}">
-            {{ indice + 1 }}: {{ persona.nombre }} {{ persona.apellido }}
+          <a
+            [routerLink]="['/listapersonas', indice]"
+            [queryParams]="{ modoEdicion: 1 }"
+          >
+            {{ persona.nombre }} {{ persona.apellido }}
           </a>
         </li>
       </ul>
     </div>
-    <div class="col-4"></div>
-    <div class="col-4">
-      <button type="submit" class="btn btn-info" (click)="emitirSaludo()">
-        Editar
-      </button>
+    <div
+      class="col-4"
+      style="
+        background-color: rgb(176, 212, 200);
+        border: 1px solid white;
+        text-align: center;
+      "
+    >
+      Indice: {{ indice + 1 }}
     </div>
   </div>
 </div>
