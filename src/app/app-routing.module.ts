@@ -10,9 +10,10 @@ import { PersonasComponent } from './personas/personas.component';
 
 const routes: Routes = [
   {path: '', component: ListadoPersonasComponent},
-  {path: 'listapersonas', component: ListadoPersonasComponent},
-  {path: 'listapersonas/agregar', component: FormularioComponent},
-  {path: 'listapersonas/:id', component: FormularioComponent},
+  {path: 'listapersonas', component: ListadoPersonasComponent, children: [
+    {path: 'agregar', component: FormularioComponent},
+    {path: ':id', component: FormularioComponent},
+  ]},
   {path: 'calculadora', component: CalculadoraComponent},
   {path: 'presupuesto', component: PresupuestoComponent},
   {path: 'personas', component: PersonasComponent}
