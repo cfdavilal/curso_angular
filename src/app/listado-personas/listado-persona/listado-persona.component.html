@@ -4,7 +4,7 @@
     <div class="col-4">
       <ul>
         <li>
-          <a [routerLink]="['/listapersonas', indice]">
+          <a [routerLink]="['/listapersonas', indice]" [queryParams]="{modoEdicion:1}">
             {{ indice + 1 }}: {{ persona.nombre }} {{ persona.apellido }}
           </a>
         </li>
