@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+.bg-persona{
+    background-color: rgb(94, 209, 138);
+}
+.bg-all {
+    background-color: #2196F3;
+    font-family: 'helvetica neue';
+    background: url(./assets/bg-pattern.png), #2196F3;
+    background: url(./assets/bg-pattern.png), -webkit-gradient(linear, right top, left top, from(#2196F3), to(#009688));
+    background: url(./assets/bg-pattern.png), linear-gradient(to left, #2196F3, #009688)
+  }
+  .boton{
+      border-radius: 30%;
+  }
+  .bg-presupuesto {
+    background-color: #b61724;
+    font-family: 'helvetica neue';
+    background: url(./assets/bg-pattern.png), #ac1025;
+    background: url(./assets/bg-pattern.png), -webkit-gradient(linear, right top, left top, from(#2196F3), to(#009688));
+    background: url(./assets/bg-pattern.png), linear-gradient(to left, #531061, #b41d25)
+  }

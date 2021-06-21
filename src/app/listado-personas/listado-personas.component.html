@@ -1,0 +1,56 @@
+<div class="container-fluid mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4" style="text-align: right;">
+        <button class="btn btn-success" *ngIf="isAuth()" (click)="salir()">Salir</button>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4 bg-primary mt-3 text-center p-2 text-light">
+        <h3>{{ titulo }}</h3>
+      </div>
+      <div class="col-4"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-4" style="text-align: center">
+        <hr />
+        <!-- Formulario -->
+        <button
+          class="btn btn-primary"
+          style="cursor: pointer"
+          (click)="agregar()"
+        >
+          +
+        </button>
+        <hr />
+      </div>
+      <div class="col-4"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4 bg-light">
+        <app-listado-persona
+          *ngFor="let personaElemento of personas; let i = index"
+          [persona]="personaElemento"
+          [indice]="i"
+        ></app-listado-persona>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <router-outlet></router-outlet>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+</div>

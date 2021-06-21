@@ -1,0 +1,47 @@
+<div class="container-fuild p-2">
+  <form
+    class="row g-3"
+    #f="ngForm"
+    (ngSubmit)="f.form.valid && agregarPersona()"
+  >
+    <!-- Añade elementos al formulario de manera horizontal!! -->
+    <div class="mb-3 col-md-4">
+      <label for="nombre" class="visually-hidden-focusable">Nombre</label>
+      <input
+        type="text"
+        name="nombre"
+        id="nombre"
+        placeholder="Nombre"
+        class="form-control"
+        #nombreInput
+        required
+      />
+    </div>
+    <div class="mb-3 col-md-4">
+      <label for="apellido" class="visually-hidden-focusable">Apellido</label>
+      <input
+        type="text"
+        name="apellido"
+        id="apellido"
+        placeholder="apellido"
+        class="form-control"
+        #apellidoInput
+        required
+      />
+    </div>
+    <div class="col-md-4">
+      <button type="submit" class="btn btn-primary" style="cursor: pointer">
+        +
+      </button>
+      <button
+        type="submit"
+        class="btn btn-danger"
+        style="cursor: pointer"
+        *ngIf="index != null"
+        (click)="eliminarPersona(index)"
+      >
+        -
+      </button>
+    </div>
+  </form>
+</div>

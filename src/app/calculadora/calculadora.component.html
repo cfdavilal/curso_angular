@@ -1,0 +1,5 @@
+<div class="container">
+    <h1>{{getTitulo_calculadora()}} </h1>
+    <app-form-calculadora (resultadoSuma)='nuevoResultado($event)'></app-form-calculadora>
+    <app-resultado-calculadora [resultadoSum]="getResultado()"></app-resultado-calculadora>
+</div>
