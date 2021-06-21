@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginService } from '../login/login.service';
 import { PersonasService } from '../personas.service';
 import { Persona } from './Persona.model';
 
@@ -18,7 +19,8 @@ export class ListadoPersonasComponent implements OnInit {
 
   constructor(
     private personasService: PersonasService,
-    private router: Router
+    private router: Router,
+    private loginService: LoginService
   ) {}
 
   ngOnInit(): void {
@@ -31,5 +33,13 @@ export class ListadoPersonasComponent implements OnInit {
 
   agregar() {
     this.router.navigate(['listapersonas/agregar']);
+  }
+
+  isAuth(){
+    return this.loginService.isAutenticado()
+  }
+
+  salir(){
+    this.loginService.logOuth()
   }
 }

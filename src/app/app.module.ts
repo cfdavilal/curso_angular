@@ -22,6 +22,8 @@ import { PresupuestoComponent } from './presupuesto/presupuesto/presupuesto.comp
 import { ErrorComponent } from './error/error.component';
 import { DataServices } from './data.services';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { LoginService } from './login/login.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     IngresosComponent,
     EgresosComponent,
     PresupuestoComponent,
-    ErrorComponent
+    ErrorComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     FormsModule, //Necesario para el Two Way binding
     HttpClientModule
   ],
-  providers: [LoggingService, PersonasService, DataServices],
+  providers: [LoggingService, PersonasService, DataServices, LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
