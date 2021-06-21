@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ListadoPersonasComponent } from './listado-personas/listado-personas.component';
 import { ListadoPersonaComponent } from './listado-personas/listado-persona/listado-persona.component';
@@ -9,9 +8,10 @@ import { PresupuestoComponent } from './presupuesto/presupuesto/presupuesto.comp
 import { PersonasComponent } from './personas/personas.component';
 import { PersonaComponent } from './personas/persona/persona.component';
 import { ErrorComponent } from './error/error.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  {path: '', component: ListadoPersonasComponent},
+  {path: '', component: LoginComponent},
   {path: 'listapersonas', component: ListadoPersonasComponent, children: [
     {path: 'agregar', component: FormularioComponent},
     {path: ':id', component: FormularioComponent},
@@ -19,6 +19,7 @@ const routes: Routes = [
   {path: 'calculadora', component: CalculadoraComponent},
   {path: 'presupuesto', component: PresupuestoComponent},
   {path: 'personas', component: PersonasComponent},
+  {path: 'login', component: LoginComponent},
   {path: '**', component: ErrorComponent}
 ]
 

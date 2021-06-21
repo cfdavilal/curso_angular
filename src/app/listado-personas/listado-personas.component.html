@@ -1,5 +1,12 @@
-<div class="container-fluid">
+<div class="container-fluid mt-5">
   <div class="container">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4" style="text-align: right;">
+        <button class="btn btn-success" *ngIf="isAuth()" (click)="salir()">Salir</button>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
     <div class="row">
       <div class="col-4"></div>
       <div class="col-4 bg-primary mt-3 text-center p-2 text-light">
@@ -11,11 +18,17 @@
   <div class="container">
     <div class="row">
       <div class="col-4"></div>
-      <div class="col-4" style="text-align: center;">
+      <div class="col-4" style="text-align: center">
         <hr />
         <!-- Formulario -->
-        <button class="btn btn-primary" style="cursor: pointer;" (click)="agregar()">+</button>
-        <hr>
+        <button
+          class="btn btn-primary"
+          style="cursor: pointer"
+          (click)="agregar()"
+        >
+          +
+        </button>
+        <hr />
       </div>
       <div class="col-4"></div>
     </div>
